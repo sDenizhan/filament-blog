@@ -3,6 +3,7 @@
 namespace SDenizhan\Blog;
 
 use Filament\Contracts\Plugin;
+use Filament\Facades\Filament;
 use Filament\Panel;
 use SDenizhan\Blog\Filament\Resources\PostCategoryResource;
 use SDenizhan\Blog\Filament\Resources\PostResource;
@@ -26,8 +27,8 @@ class BlogPlugin implements Plugin
             PostResource::class
         ]);
 
-        PostResource::shouldRegisterNavigation();
-        PostCategoryResource::shouldRegisterNavigation();
+        PostCategoryResource::routes($panel);
+        PostResource::routes($panel);
     }
 
     public static function make(): static
