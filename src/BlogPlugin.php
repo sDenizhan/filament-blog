@@ -3,7 +3,6 @@
 namespace SDenizhan\Blog;
 
 use Filament\Contracts\Plugin;
-use Filament\Facades\Filament;
 use Filament\Panel;
 use SDenizhan\Blog\Filament\Resources\PostCategoryResource;
 use SDenizhan\Blog\Filament\Resources\PostResource;
