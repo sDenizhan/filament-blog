@@ -24,7 +24,7 @@ class BlogPlugin implements Plugin
     {
         $panel->resources([
             PostCategoryResource::class,
-            PostResource::class
+            PostResource::class,
         ]);
 
         PostCategoryResource::routes($panel);
