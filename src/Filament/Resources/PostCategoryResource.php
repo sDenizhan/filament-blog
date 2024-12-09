@@ -2,8 +2,6 @@
 
 namespace SDenizhan\Blog\Filament\Resources;
 
-use App\Filament\Resources\PostCategoryResource\Pages;
-use App\Filament\Resources\PostCategoryResource\RelationManagers;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
