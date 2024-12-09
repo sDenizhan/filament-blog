@@ -1,15 +1,17 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace SDenizhan\Blog;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
+use SDenizhan\Blog\Filament\Resources\PostCategoryResource;
+use SDenizhan\Blog\Filament\Resources\PostResource;
 
-class SkeletonPlugin implements Plugin
+class BlogPlugin implements Plugin
 {
     public function getId(): string
     {
-        return 'skeleton';
+        return 'blog';
     }
 
     public function register(Panel $panel): void
@@ -19,7 +21,13 @@ class SkeletonPlugin implements Plugin
 
     public function boot(Panel $panel): void
     {
-        //
+        $panel->resources([
+            PostCategoryResource::class,
+            PostResource::class
+        ]);
+
+        PostResource::shouldRegisterNavigation();
+        PostCategoryResource::shouldRegisterNavigation();
     }
 
     public static function make(): static
